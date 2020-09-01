@@ -3,6 +3,7 @@ let carouselItems = [...carousel.children];
 let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let current = 0;
+let autoPlay = 4000;
 
 // removing active class form carouselitems
 function removeActive(){
@@ -48,3 +49,11 @@ nextBtn.addEventListener("click", function (){
     }
     nextCarousel();
 });
+
+// autoplay function
+setInterval(function(){
+    if( current === carouselItems.length - 1 ){
+        current =  -1;
+     }
+     nextCarousel();
+}, autoPlay);
