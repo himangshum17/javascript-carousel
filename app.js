@@ -1,5 +1,4 @@
-let carousel = document.querySelector(".carousel");
-let carouselItems = [...carousel.children];
+let carouselItems = document.querySelectorAll(".item");
 let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let current = 0;
@@ -57,3 +56,4 @@ setInterval(function(){
      }
      nextCarousel();
 }, autoPlay);
+
